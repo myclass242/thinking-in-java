@@ -63,5 +63,29 @@ public class Precedence {
         double expDouble2 = 47e47;
         System.out.println(expDouble);
         System.out.println(expDouble2);
+
+        int e10i1 = 0xaaaaaaaa;
+        int e10i2 = 0x55555555;
+        System.out.println(Integer.toBinaryString(e10i1));
+        System.out.println(Integer.toBinaryString(e10i2));
+        System.out.println(Integer.toBinaryString(~e10i1));
+        System.out.println(Integer.toBinaryString(~e10i2));
+        System.out.println(Integer.toBinaryString(e10i1&e10i2));
+        System.out.println(Integer.toBinaryString(e10i1|e10i2));
+        System.out.println(Integer.toBinaryString(e10i1^e10i2));
+
+        int e11i = 0xaaaaaaaa;
+        for (int i = 0; i < 0x1f; ++i)
+        {
+            int tmpe11i = e11i>>i;
+            System.out.println(Integer.toBinaryString(tmpe11i));
+        }
+
+        String s = "x,y,z";
+        System.out.println(s + x + y + z);
+        System.out.println(x + " " + s);
+        s += "(summed) = ";
+        System.out.println(s + (x + y + z));
+        System.out.println("" + x);
     }
 }
