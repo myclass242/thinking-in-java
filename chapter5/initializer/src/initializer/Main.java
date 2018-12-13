@@ -78,6 +78,20 @@ public class Main
         newPrintArray("one", "two", "three");
         newPrintArray((Object[])new Integer[]{1, 2, 4, 5});
         newPrintArray();
+
+        System.out.println("Object...");
+        NewVarArgs.printArray(new Integer(47), new Float(3.14), new Double(11.11));
+        NewVarArgs.printArray(47, 3.14, 11.11);
+        NewVarArgs.printArray("one", "two", "three");
+        NewVarArgs.printArray(new A(), new A(), new A());
+        NewVarArgs.printArray(new Integer[]{1, 2, 3, 4, 5});
+        NewVarArgs.printArray();
+
+        Spiciness howHot = Spiciness.MEDIUM;
+        System.out.println(howHot);
+        for (Spiciness s : Spiciness.values()){
+            System.out.println(s + ", ordinal " + s.ordinal());
+        }
     }
     static void printArray(Object[] args)
     {
