@@ -1,0 +1,41 @@
+1:package com.zy.io;
+2:
+3:import java.io.*;
+4:
+5:public class Exercise14 {
+6:    private static final String file1 = "Exercise14_1.out";
+7:    private static final String file2 = "Exercise14_2.out";
+8:    public static void main(String[] args) throws IOException{
+9:        BufferedReader in = new BufferedReader(new FileReader("./src/com/zy/io/Exercise14.java"));
+10:
+11:        int lineCount;
+12:        String line;
+13:        long start, duration;
+14:
+15:
+16:
+17:        lineCount = 0;
+18:        in = new BufferedReader(new FileReader("./src/com/zy/io/Exercise14.java"));
+19:        PrintWriter out2 = new PrintWriter(new FileWriter(file2));
+20:        start = System.nanoTime();
+21:        while ((line = in.readLine()) != null) {
+22:            out2.println(++lineCount + ":" + line);
+23:        }
+24:        duration = System.nanoTime() - start;
+25:        System.out.println("Duration:" + duration);
+26:        out2.close();
+27:        in.close();
+28:        
+29:        in = new BufferedReader(new FileReader("./src/com/zy/io/Exercise14.java"));
+30:        lineCount = 0;
+31:        PrintWriter out1 = new PrintWriter(new BufferedWriter(new FileWriter(file1)));
+32:        start = System.nanoTime();
+33:        while ((line = in.readLine()) != null) {
+34:            out1.println(++lineCount + ":" + line);
+35:        }
+36:        duration = System.nanoTime() - start;
+37:        System.out.println("Duration:" + duration);
+38:        out1.close();
+39:        in.close();
+40:    }
+41:}

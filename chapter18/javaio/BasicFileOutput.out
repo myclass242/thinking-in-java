@@ -1,0 +1,19 @@
+1:package com.zy.io;
+2:
+3:import java.io.*;
+4:
+5:public class BasicFileOutput {
+6:    private static final String file = "BasicFileOutput.out";
+7:    public static void main(String[] args) throws IOException{
+8:        BufferedReader in = new BufferedReader(new StringReader(BufferedInputFiler.read("./src/com/zy/io/BasicFileOutput.java")));
+9:        PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+10:
+11:        int lineCount = 0;
+12:        String line;
+13:        while ((line = in.readLine()) != null) {
+14:            out.println(++lineCount + ":" + line);
+15:        }
+16:        out.close();
+17:        System.out.print(BufferedInputFiler.read(file));
+18:    }
+19:}

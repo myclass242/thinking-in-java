@@ -1,0 +1,32 @@
+1:}
+2:    }
+3:        e7.print();
+4:        e7.read("./src/com/zy/io/Exercise7.java");
+5:        Exercise7 e7 = new Exercise7();
+6:    public static void main(String[] args) throws IOException{
+7:
+8:    }
+9:        System.out.println(sb);
+10:        }
+11:            sb.append(line + "\n");
+12:        while (null != (line = content.pollLast())) {
+13:        String line;
+14:        StringBuilder sb = new StringBuilder();
+15:    public void print() {
+16:    }
+17:        }
+18:            content.add(line);
+19:        while(null != (line = in.readLine())) {
+20:        String line;
+21:        BufferedReader in = new BufferedReader(new FileReader(fileName));
+22:    public void read(String fileName) throws IOException{
+23:    }
+24:        content = new LinkedList<>();
+25:    public Exercise7() {
+26:    private LinkedList<String> content;
+27:public class Exercise7 {
+28:
+29:import java.util.*;
+30:import java.io.*;
+31:
+32:package com.zy.io;
